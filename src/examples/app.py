@@ -56,6 +56,15 @@ class NexmoApp(appier.WebApp):
         balance = api.balance_account()
         return balance
 
+    @appier.route("/sms", "GET")
+    def sms(self):
+        sender = self.field("sender")
+        receiver = self.field("receiver")
+        text = self.field("text")
+        api = self.get_api()
+        result = api.send_sms(sender, receiver, text)
+        return result
+
     def get_api(self):
         return base.get_api()
 

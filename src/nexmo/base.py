@@ -39,6 +39,7 @@ __license__ = "GNU General Public License (GPL), Version 3"
 
 import appier
 
+from nexmo import sms
 from nexmo import account
 
 BASE_URL = "https://rest.nexmo.com/"
@@ -47,6 +48,7 @@ base url value is provided to the constructor """
 
 class Api(
     appier.Api,
+    sms.SmsApi,
     account.AccountApi
 ):
 
