@@ -41,7 +41,7 @@ import appier
 
 from nexmo import account
 
-BASE_URL = "https://rest.nexmo.com/ni/json/"
+BASE_URL = "https://rest.nexmo.com/"
 """ The default base url to be used when no other
 base url value is provided to the constructor """
 
