@@ -39,24 +39,26 @@ __license__ = "GNU General Public License (GPL), Version 3"
 
 import appier
 
-from nexmo import account
+from examples import base
 
-BASE_URL = "https://rest.nexmo.com/ni/json/"
-""" The default base url to be used when no other
-base url value is provided to the constructor """
+class NexmoApp(appier.WebApp):
 
-class Api(
-    appier.Api,
-    account.AccountApi
-):
+    def __init__(self):
+        appier.WebApp.__init__(self, name = "nexmo")
 
-    def __init__(self, *args, **kwargs):
-        appier.OAuth1Api.__init__(self, *args, **kwargs)
-        self.base_url = kwargs.get("base_url", BASE_URL)
-        self.api_key = kwargs.get("api_key", None)
-        self.api_secret = kwargs.get("api_secret", None)
+    @appier.route("/", "GET")
+    def index(self):
+        return self.balance()
 
-    def build(self, method, url, headers, kwargs):
-        appier.Api.build(self, method, url, headers, kwargs)
-        kwargs["api_key"] = self.api_key
-        kwargs["api_secret"] = self.api_secret
+    @appier.route("/balance", "GET")
+    def balance(self):
+        api = self.get_api()
+        balance = api.balance_account()
+        return balance
+
+    def get_api(self):
+        return base.get_api()
+
+if __name__ == "__main__":
+    app = NexmoApp()
+    app.serve()
