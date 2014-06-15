@@ -53,5 +53,10 @@ class Api(
     def __init__(self, *args, **kwargs):
         appier.OAuth1Api.__init__(self, *args, **kwargs)
         self.base_url = kwargs.get("base_url", BASE_URL)
-        self.key = kwargs.get("key", None)
-        self.secret = kwargs.get("secret", None)
+        self.api_key = kwargs.get("api_key", None)
+        self.api_secret = kwargs.get("api_secret", None)
+
+    def build(self, method, url, headers, kwargs):
+        appier.Api.build(self, method, url, headers, kwargs)
+        kwargs["api_key"] = self.api_key
+        kwargs["api_secret"] = self.api_secret
