@@ -39,8 +39,8 @@ __license__ = "GNU General Public License (GPL), Version 3"
 
 import appier
 
-from nexmo import sms
-from nexmo import account
+from . import sms
+from . import account
 
 BASE_URL = "https://rest.nexmo.com/"
 """ The default base url to be used when no other
