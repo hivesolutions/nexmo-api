@@ -3,5 +3,5 @@
 
 session.shelve*
 
-/dist/
-/src/nexmo_api.egg-info/
+/dist
+/src/nexmo_api.egg-info
