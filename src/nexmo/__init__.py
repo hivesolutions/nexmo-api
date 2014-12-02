@@ -39,5 +39,5 @@ from . import base
 from . import sms
 
 from .account import AccountApi
-from .base import Api
+from .base import BASE_URL, Api
 from .sms import SmsApi
