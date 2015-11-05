@@ -60,7 +60,18 @@ class Api(
         self.api_key = kwargs.get("api_key", self.api_key)
         self.api_secret = kwargs.get("api_secret", self.api_secret)
 
-    def build(self, method, url, headers, kwargs):
+    def build(
+        self,
+        method,
+        url,
+        data = None,
+        data_j = None,
+        data_m = None,
+        headers = None,
+        params = None,
+        mime = None,
+        kwargs = None
+    ):
         appier.Api.build(self, method, url, headers, kwargs)
         kwargs["api_key"] = self.api_key
         kwargs["api_secret"] = self.api_secret
