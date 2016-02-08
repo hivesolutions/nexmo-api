@@ -46,7 +46,7 @@ setuptools.setup(
     author = "Hive Solutions Lda.",
     author_email = "development@hive.pt",
     description = "Nexmo API Client",
-    license = "GNU General Public License (GPL), Version 3",
+    license = "Apache License, Version 2.0",
     keywords = "nexmo api",
     url = "http://nexmo_api.hive.pt",
     zip_safe = False,
@@ -62,7 +62,7 @@ setuptools.setup(
     classifiers = [
         "Development Status :: 3 - Alpha",
         "Topic :: Utilities",
-        "License :: OSI Approved :: GNU General Public License (GPL)",
+        "License :: OSI Approved :: Apache Software License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.6",
