@@ -43,8 +43,12 @@ from . import base
 
 class NexmoApp(appier.WebApp):
 
-    def __init__(self):
-        appier.WebApp.__init__(self, name = "nexmo")
+    def __init__(self, *args, **kwargs):
+        appier.WebApp.__init__(
+            self,
+            name = "nexmo",
+            *args, **kwargs
+        )
 
     @appier.route("/", "GET")
     def index(self):
