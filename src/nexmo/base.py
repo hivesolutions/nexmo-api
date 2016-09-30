@@ -53,7 +53,7 @@ class Api(
 ):
 
     def __init__(self, *args, **kwargs):
-        appier.OAuth1Api.__init__(self, *args, **kwargs)
+        appier.Api.__init__(self, *args, **kwargs)
         self.api_key = appier.conf("NEXMO_API_KEY", None)
         self.api_secret = appier.conf("NEXMO_API_SECRET", None)
         self.base_url = kwargs.get("base_url", BASE_URL)
