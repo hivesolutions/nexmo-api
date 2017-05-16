@@ -48,7 +48,7 @@ setuptools.setup(
     description = "Nexmo API Client",
     license = "Apache License, Version 2.0",
     keywords = "nexmo api",
-    url = "http://nexmo_api.hive.pt",
+    url = "http://nexmo-api.hive.pt",
     zip_safe = False,
     packages = [
         "nexmo"
