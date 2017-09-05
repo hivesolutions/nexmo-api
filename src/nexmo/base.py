@@ -46,14 +46,14 @@ BASE_URL = "https://rest.nexmo.com/"
 """ The default base url to be used when no other
 base url value is provided to the constructor """
 
-class Api(
-    appier.Api,
-    sms.SmsApi,
-    account.AccountApi
+class API(
+    appier.API,
+    sms.SmsAPI,
+    account.AccountAPI
 ):
 
     def __init__(self, *args, **kwargs):
-        appier.Api.__init__(self, *args, **kwargs)
+        appier.API.__init__(self, *args, **kwargs)
         self.api_key = appier.conf("NEXMO_API_KEY", None)
         self.api_secret = appier.conf("NEXMO_API_SECRET", None)
         self.base_url = kwargs.get("base_url", BASE_URL)
@@ -72,6 +72,6 @@ class Api(
         mime = None,
         kwargs = None
     ):
-        appier.Api.build(self, method, url, headers, kwargs)
+        appier.API.build(self, method, url, headers, kwargs)
         kwargs["api_key"] = self.api_key
         kwargs["api_secret"] = self.api_secret

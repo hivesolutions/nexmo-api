@@ -38,6 +38,6 @@ from . import account
 from . import base
 from . import sms
 
-from .account import AccountApi
-from .base import BASE_URL, Api
-from .sms import SmsApi
+from .account import AccountAPI
+from .base import BASE_URL, API
+from .sms import SmsAPI

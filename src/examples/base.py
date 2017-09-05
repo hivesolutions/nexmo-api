@@ -42,7 +42,7 @@ import appier
 import nexmo
 
 def get_api():
-    return nexmo.Api(
+    return nexmo.API(
         api_key = appier.conf("NEXMO_API_KEY"),
         api_secret = appier.conf("NEXMO_API_SECRET")
     )
