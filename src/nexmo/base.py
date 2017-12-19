@@ -43,8 +43,8 @@ from . import sms
 from . import account
 
 BASE_URL = "https://rest.nexmo.com/"
-""" The default base url to be used when no other
-base url value is provided to the constructor """
+""" The default base URL to be used when no other
+base URL value is provided to the constructor """
 
 class API(
     appier.API,
