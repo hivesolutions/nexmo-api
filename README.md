@@ -4,8 +4,10 @@ Nexmo API client written in Python.
 
 ## Configuration
 
-* `NEXMO_API_KEY` (`str`) - The Nexmo identifier to make API requests (defaults to `None`)
-* `NEXMO_API_SECRET` (`str`) - The secret key to be used to authenticate API requests (defaults to `None`)
+| Name | Type | Description |
+| ----- | ----- | ----- |
+| **NEXMO_API_KEY** | `str` | The Nexmo identifier to make API requests (defaults to `None`). |
+| **NEXMO_API_SECRET** | `str` | The secret key to be used to authenticate API requests (defaults to `None`). |
 
 ## License
 
