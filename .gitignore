@@ -5,4 +5,4 @@ session.shelve*
 
 /dist
 /build
-/src/nexmo_api.egg-info
+/src/nexmo-api.egg-info
