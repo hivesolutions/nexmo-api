@@ -42,6 +42,7 @@ setuptools.setup(
     url="http://nexmo-api.hive.pt",
     zip_safe=False,
     packages=["nexmo"],
+    test_suite="nexmo.test",
     package_dir={"": os.path.normpath("src")},
     install_requires=["appier"],
     classifiers=[
